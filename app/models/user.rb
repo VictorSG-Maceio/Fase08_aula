@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :gains, dependent: :destroy
+  has_many :expenses, dependent: :destroy
+  
   validates_uniqueness_of :auth_token
   before_create :generate_authentication_token!
 
