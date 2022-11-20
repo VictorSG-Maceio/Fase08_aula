@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       devise_for :user, controllers: { session: "api/v1/sessions" }
       resources :users
       resources :gains
+      resources :expenses
     end
   end
 end
